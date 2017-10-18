@@ -1,0 +1,30 @@
+package com.company;
+import java.util.*;
+
+
+public class Main {
+
+    static int stringConstruction(String s) {
+        char[] arr = s.toCharArray();
+        boolean[] alpha = new boolean[26];
+        int cost = 0;
+        for(int i=0;i<arr.length;i++) {
+            if(!alpha[arr[i]-'a']) {
+                cost++;
+                alpha[arr[i]-'a'] = true;
+            }
+        }
+        return cost;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int q = in.nextInt();
+        for(int a0 = 0; a0 < q; a0++){
+            String s = in.next();
+            int result = stringConstruction(s);
+            System.out.println(result);
+        }
+        in.close();
+    }
+}
