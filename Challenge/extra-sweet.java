@@ -118,6 +118,8 @@ public class Solution {
             // whenever something is taken, then the node will split into two.. if 2 to 6 is taken, then it is split to [0,0] and [8,n]
             // because along with 2 and 6, 1 and 7 are also given away
             // case 3 - both ends are completely within a node
+            // we add one more node like: [0,5]->[8,10]
+            // will become [0,0]->[5,5]->[8,10] after 1,3 is asked..
             if(curr.left.compareTo(lMinusOne)<0 && rPlusOne.compareTo(curr.right)<0) {
                 alist.add(currIndex+1, new Node(rPlusTwo, curr.right));
                 curr.right = lMinusTwo;
