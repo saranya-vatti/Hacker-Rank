@@ -10,7 +10,7 @@ public class Solution {
         StringBuilder sb = new StringBuilder();
         String line;
         while(sc.hasNextLine()) {
-            line = sc.nextLine();
+            line = sc.nextLine().trim();
             int startMulti = line.indexOf("/*");
             int endMulti = line.indexOf("*/");
             int singleLine = line.indexOf("//");
